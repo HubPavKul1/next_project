@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Profile } from "./Profile";
 
 export const metadata: Metadata = {
     title: "Profile",
@@ -7,5 +8,5 @@ export const metadata: Metadata = {
 
 
 export default function ProfilePage() {
-    return <div>Profile</div>;
+    return <Profile/>;
 }

@@ -1,7 +1,16 @@
-export default function Explore() {
+import type { Metadata } from "next";
+import Explore from "./Explore";
+import { Suspense } from "react";
+
+export const metadata: Metadata = {
+  title: "Explore",
+};
+
+export default function ExplorePage() {
+  //For production need Suspense fore correct useSearchParams
   return (
-    <div>
-      <h1>Explore</h1>
-    </div>
+    <Suspense>
+      <Explore />
+    </Suspense>
   );
 }

@@ -12,7 +12,7 @@ export function Header() {
             src="/x-logo.svg"
             width={28}
             height={28}
-            priority
+            // priority
           />
         </span>
       </Link>
