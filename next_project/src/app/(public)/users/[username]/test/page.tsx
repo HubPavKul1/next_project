@@ -1,9 +1,21 @@
 //серверная часть useParams url: .../users/[username]/test
 
+import type { Metadata } from "next";
+
 type Params = { username: string };
 
+export async function generateMetaData({
+  params
+}: {
+  params: Promise<Params>;
+}): Promise<Metadata> {
+  return {
+    title: "@" + (await params).username
+  }
+}
+
 export default async function TestPage({
-  params,
+  params
 }: {
   params: Promise<Params>;
 }) {
